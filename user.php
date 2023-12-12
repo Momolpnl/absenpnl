@@ -123,7 +123,7 @@ session_start();
     <footer class="footer">
         <div class="container">
             <div class="copyright ml-auto">
-                &copy; <?php echo date('Y');?> Absensi Siswa MTs. Insan Kreasi (<a href="index.php">Imas Andriyani </a>
+                &copy; <?php echo date('Y');?> Absensi Mahasiswa pnl(<a href="index.php">Muhammad Maulana </a>
                 | 2021)
             </div>
         </div>

@@ -67,8 +67,7 @@ include 'config/absensipnl';
                                     <!-- <h5 class="text-white op-7 mb-2">Absen Lebih mudah gunakan Aplikasi Absensi</h5> -->
                                 </div>
                                 <div class="ml-md-auto py-2 py-md-0">
-                                    <a href="#" class="btn btn-white btn-border btn-round mr-2">Kp. Ciapuas RT/RW 07/02
-                                        Ds. Batok Kec. Tenjo Kab. Bogor 16370 Prov. Jawa Barat</a>
+                                    <a href="#" class="btn btn-white btn-border btn-round mr-2">Buket rata Lhokseumawe</a>
                                     <!-- <a href="view/siswa.php" class="btn btn-secondary btn-round">Ajukan Izin</a> -->
                                 </div>
                             </div>
@@ -176,13 +175,13 @@ include 'config/absensipnl';
             <footer class="footer">
                 <div class="container">
                     <div class="copyright ml-auto">
-                        &copy; <?php echo date('Y');?> Absensi Siswa.<a href="index.php">Elfita Diana </a> | 2515048
+                        &copy; <?php echo date('Y');?> Absensi Mahasiswa.<a href="index.php">Muhammad Maulana </a> | 2515048
                     </div>
                 </div>
             </footer>
 
         </div>
-
+        
 
 
         <!--   Core JS Files   -->
