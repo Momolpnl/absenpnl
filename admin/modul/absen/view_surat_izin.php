@@ -1,6 +1,6 @@
 <?php 
 $izin = mysqli_query($con,"SELECT * FROM tb_izin
-	INNER JOIN tb_siswa ON tb_izin.id_siswa=tb_siswa.id_siswa
+	INNER JOIN tb_mahasiswa ON tb_izin.id_mahasiswa=tb_mahasiswa.id_mahasiswa
 	-- INNER JOIN tb_mengajar ON tb_izin.id_mengajar=tb_mengajar.id_mengajar
 	WHERE tb_izin.id_izin='$_GET[izin]'");
 foreach ($izin as $d)
@@ -26,7 +26,7 @@ foreach ($izin as $d)
 		<tr>
 		<td>Nama</td>
 		<td>:</td>
-		<td><strong> <?=$d['nama_siswa'];?> </strong></td>
+		<td><strong> <?=$d['nama_mahasiswa'];?> </strong></td>
 		</tr>
 		<tr>
 			<td>Nis</td>
@@ -118,7 +118,7 @@ foreach ($izin as $d)
 		<!-- <center> -->
 			<a href="?page=absen&act=konfirmasi&id=<?=$d['id_izin'];?>&persetujuan=Yes" class="btn btn-info btn-sm"><i class="fa fa-check"></i> Konfirmasi</a>
 
-			<a target="_blank" href="https://api.whatsapp.com/send?phone=<?=$d['hp_pj'];?>&text=Permohonan Izin Ananda (<?=$d['nama_siswa']; ?>) <?php
+			<a target="_blank" href="https://api.whatsapp.com/send?phone=<?=$d['hp_pj'];?>&text=Permohonan Izin Ananda (<?=$d['nama_mahasiswa']; ?>) <?php
 				if ($d['ket_izin']=='0') {
 					echo "Belum disetujui !";
 				}else{

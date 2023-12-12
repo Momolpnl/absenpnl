@@ -1,10 +1,10 @@
 	<?php 
 
-$edit = mysqli_query($con,"SELECT * FROM tb_siswa WHERE id_siswa='$_GET[id]' ");
+$edit = mysqli_query($con,"SELECT * FROM tb_mahasiswa WHERE id_mahasiswa='$_GET[id]' ");
 foreach ($edit as $d)?>
 <div class="page-inner">
           <div class="page-header">
-            <h4 class="page-title">Siswa</h4>
+            <h4 class="page-title">mahasiswa</h4>
             <ul class="breadcrumbs">
               <li class="nav-home">
                 <a href="#">
@@ -15,13 +15,13 @@ foreach ($edit as $d)?>
                 <i class="flaticon-right-arrow"></i>
               </li>
               <li class="nav-item">
-                <a href="#">Data Mahasiswa</a>
+                <a href="#">Data mahasiswa</a>
               </li>
               <li class="separator">
                 <i class="flaticon-right-arrow"></i>
               </li>
               <li class="nav-item">
-                <a href="#">Edit Siswa</a>
+                <a href="#">Edit mahasiswa</a>
               </li>
             </ul>
           </div>
@@ -29,19 +29,19 @@ foreach ($edit as $d)?>
                 <div class="col-lg-8">
                   <div class="card">
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Form Edit Siswa</h3>
+                      <h3 class="h4">Form Edit mahasiswa</h3>
                     </div>
                     <div class="card-body">
 
 								
-	<form action="?page=siswa&act=proses" method="post" enctype="multipart/form-data">
-		<input name="id" type="hidden" value="<?=$d['id_siswa'] ?>">	
+	<form action="?page=mahasiswa&act=proses" method="post" enctype="multipart/form-data">
+		<input name="id" type="hidden" value="<?=$d['id_mahasiswa'] ?>">	
 
 <table cellpadding="3" style="font-weight: bold;">
   <tr>
     <td>Nama Peserta Didik </td>
     <td>:</td>
-    <td><input type="text" class="form-control" name="nama" value="<?=$d['nama_siswa'] ?>"></td>
+    <td><input type="text" class="form-control" name="nama" value="<?=$d['nama_mahasiswa'] ?>"></td>
   </tr>
   <tr>
     <td>NIS/NISN</td>
@@ -75,7 +75,7 @@ foreach ($edit as $d)?>
 
  
   <tr>
-    <td>Kelas Siswa</td>
+    <td>Kelas mahasiswa</td>
     <td>:</td>
 	<td>
     <select class="form-control" name="kelas">
@@ -110,7 +110,7 @@ foreach ($edit as $d)?>
   </tr>
   <tr>
     <td colspan="3">
-		<button name="editSiswa" type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Update</button>
+		<button name="editmahasiswa" type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Update</button>
 		<a href="javascript:history.back()" class="btn btn-warning"><i class="fa fa-chevron-left"></i> Batal</a>
     </td>
   </tr>

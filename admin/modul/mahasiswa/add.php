@@ -1,6 +1,6 @@
 <div class="page-inner">
           <div class="page-header">
-            <h4 class="page-title">Siswa</h4>
+            <h4 class="page-title">mahasiswa</h4>
             <ul class="breadcrumbs">
               <li class="nav-home">
                 <a href="#">
@@ -11,13 +11,13 @@
                 <i class="flaticon-right-arrow"></i>
               </li>
               <li class="nav-item">
-                <a href="#">Data Mahasiswa</a>
+                <a href="#">Data mahasiswa</a>
               </li>
               <li class="separator">
                 <i class="flaticon-right-arrow"></i>
               </li>
               <li class="nav-item">
-                <a href="#">Tambah Siswa</a>
+                <a href="#">Tambah mahasiswa</a>
               </li>
             </ul>
           </div>
@@ -25,10 +25,10 @@
                 <div class="col-lg-8">
                   <div class="card">
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Form Entry Siswa</h3>
+                      <h3 class="h4">Form Entry mahasiswa</h3>
                     </div>
                     <div class="card-body">
-<form action="?page=siswa&act=proses" method="post" enctype="multipart/form-data">
+<form action="?page=mahasiswa&act=proses" method="post" enctype="multipart/form-data">
 
 <table cellpadding="3" style="font-weight: bold;">
   <tr>
@@ -68,7 +68,7 @@
     <td colspan="3">Akademik</td>
   </tr>
   <tr>
-    <td>Kelas Siswa</td>
+    <td>Kelas mahasiswa</td>
     <td>:</td>
 	<td>
     <select class="form-control" name="kelas">
@@ -88,7 +88,7 @@
    <tr>
     <td>Tahun Masuk</td>
     <td>:</td>
-    <td><input name="th_masuk" type="number" class="form-control" placeholder="2019"></td>
+    <td><input name="th_masuk" type="number" class="form-control" placeholder="2023"></td>
   </tr>
   <tr>
     <td>Pas Foto</td>
@@ -97,7 +97,7 @@
   </tr>
   <tr>
     <td colspan="3">
-		<button name="saveSiswa" type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button>
+		<button name="savemahasiswa" type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button>
 		<a href="javascript:history.back()" class="btn btn-warning"><i class="fa fa-chevron-left"></i> Batal</a>
     </td>
   </tr>

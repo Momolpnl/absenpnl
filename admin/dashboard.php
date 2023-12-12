@@ -23,7 +23,7 @@ $id_login = @$_SESSION['admin'];
 
 
 $sql = mysqli_query($con, "SELECT * FROM tb_admin
- WHERE id_admin = '$id_login'") or die(mysqli_error($con));
+WHERE id_admin = '$id_login'") or die(mysqli_error($con));
 $data = mysqli_fetch_array($sql);
 ?>
 <!DOCTYPE html>
@@ -290,20 +290,20 @@ $data = mysqli_fetch_array($sql);
 						</li>
 
 						<li class="nav-item">
-							<a data-toggle="collapse" href="#siswa">
+							<a data-toggle="collapse" href="#mahasiswa">
 								<i class="fas fa-user-friends"></i>
-								<p>Data Mahasiswa</p>
+								<p>Data mahasiswa</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse" id="siswa">
+							<div class="collapse" id="mahasiswa">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="?page=siswa&act=add ">
+										<a href="?page=mahasiswa&act=add ">
 											<span class="sub-item"> Tambah mahasiswa </span>
 										</a>
 									</li>
 									<li>
-										<a href="?page=siswa">
+										<a href="?page=mahasiswa">
 											<span class="sub-item"> Daftar mahasiswa </span>
 										</a>
 									</li>
