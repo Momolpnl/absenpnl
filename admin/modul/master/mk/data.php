@@ -39,15 +39,15 @@
                 <tr>
                   <th>#</th>
                   <th>Kode</th>
-                  <th>Nama Mapel</th>
+                  <th>Nama mk</th>
                   <th>Opsi</th>
                 </tr>
               </thead>
               <tbody>
                 <?php
                 $no = 1;
-                $mapel = mysqli_query($con, "SELECT * FROM tb_master_matkul");
-                foreach ($mapel as $k) { ?>
+                $mk = mysqli_query($con, "SELECT * FROM tb_master_matkul");
+                foreach ($mk as $k) { ?>
                   <tr>
                     <td><?= $no++; ?>.</td>
 
@@ -55,15 +55,15 @@
                     <td><?= $k['mk']; ?></td>
                     <td>
 
-                      <a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#edit<?= $k['id_mapel'] ?>"><i class="far fa-edit"></i> Edit</a>
-                      <a class="btn btn-danger btn-sm" onclick="return confirm('Yakin Hapus Data ??')" href="?page=master&act=delmapel&id=<?= $k['id_mapel'] ?>"><i class="fas fa-trash"></i> Del</a>
+                      <a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#edit<?= $k['id_mk'] ?>"><i class="far fa-edit"></i> Edit</a>
+                      <a class="btn btn-danger btn-sm" onclick="return confirm('Yakin Hapus Data ??')" href="?page=master&act=delmk&id=<?= $k['id_mk'] ?>"><i class="fas fa-trash"></i> Del</a>
 
                       <!-- Modal -->
-                      <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="edit<?= $k['id_mapel'] ?>" class="modal fade" style="display: none;">
+                      <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="edit<?= $k['id_mk'] ?>" class="modal fade" style="display: none;">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h4 id="exampleModalLabel" class="modal-title">Edit Mapel</h4>
+                              <h4 id="exampleModalLabel" class="modal-title">Edit Mk</h4>
                               <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
                             </div>
                             <div class="modal-body">
@@ -71,9 +71,9 @@
                                 <div class="row">
                                   <div class="col-md-10">
                                     <div class="form-group">
-                                      <label>Nama mapel</label>
-                                      <input name="id" type="hidden" value="<?= $k['id_mapel'] ?>">
-                                      <input name="mapel" type="text" value="<?= $k['mapel'] ?>" class="form-control">
+                                      <label>Nama mk</label>
+                                      <input name="id" type="hidden" value="<?= $k['id_mk'] ?>">
+                                      <input name="mk" type="text" value="<?= $k['mk'] ?>" class="form-control">
                                     </div>
 
                                     <div class="form-group">
@@ -89,7 +89,7 @@
                                 if ($save) {
                                   echo "<script>
                         alert('Data diubah !');
-                        window.location='?page=master&act=mapel';
+                        window.location='?page=master&act=mk';
                         </script>";
                                 }
                               }
@@ -128,18 +128,18 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 id="exampleModalLabel" class="modal-title">Tambah Mapel</h4>
+        <h4 id="exampleModalLabel" class="modal-title">Tambah Mk</h4>
         <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
       </div>
       <div class="modal-body">
         <form action="" method="post" class="form-horizontal">
           <div class="form-group">
-            <label>Kode mapel</label>
+            <label>Kode mk</label>
             <input name="kode" type="text" value="MP-<?= time() ?>" class="form-control" readonly>
           </div>
           <div class="form-group">
-            <label>Nama mapel</label>
-            <input name="mapel" type="text" placeholder="Nama mapel .." class="form-control">
+            <label>Nama mk</label>
+            <input name="mk" type="text" placeholder="Nama mk .." class="form-control">
           </div>
 
 
@@ -153,7 +153,7 @@
           if ($save) {
             echo "<script>
                         alert('Data tersimpan !');
-                        window.location='?page=master&act=mapel';
+                        window.location='?page=master&act=mk';
                         </script>";
           }
         }

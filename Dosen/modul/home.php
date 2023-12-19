@@ -71,7 +71,7 @@
 									<li class="list-group-item">
 										<a class="btn btn-primary btn-block text-left" href="?page=absen&pelajaran=<?= $dm['id_mengajar'] ?> ">
 											<i class="fas fa-chevron-circle-right"></i>
-											<span class="sub-item"><?= strtoupper($dm['mapel']); ?> (<?= strtoupper($dm['nama_kelas']); ?>)</span>
+											<span class="sub-item"><?= strtoupper($dm['mk']); ?> (<?= strtoupper($dm['nama_kelas']); ?>)</span>
 										</a>
 									</li>
 								<?php } ?>
@@ -90,7 +90,7 @@
 									<li class="list-group-item">
 										<a class="btn btn-secondary btn-block text-left" href="?page=rekap&pelajaran=<?= $dm['id_mengajar'] ?> ">
 											<i class="fas fa-chevron-circle-right"></i>
-											<span class="sub-item"><?= strtoupper($dm['mapel']); ?> (<?= strtoupper($dm['nama_kelas']); ?>)</span>
+											<span class="sub-item"><?= strtoupper($dm['mk']); ?> (<?= strtoupper($dm['nama_kelas']); ?>)</span>
 										</a>
 										<?php
 										$bulan = date('m');

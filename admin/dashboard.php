@@ -68,7 +68,7 @@ $data = mysqli_fetch_array($sql);
 
 				<a href="dashboard.php" class="logo">
 					<!-- <img src="../assets/img/logo_png.png" alt="navbar brand" class="navbar-brand" width="40"> -->
-					<b class="text-white">Politeknik Lhokseumawe</b>
+					<b class="text-white">PNL</b>
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
@@ -219,7 +219,7 @@ $data = mysqli_fetch_array($sql);
 										</a>
 									</li>
 									<li>
-										<a href="?page=master&act=mapel">
+										<a href="?page=master&act=mk">
 											<span class="sub-item">Mata Kuliah</span>
 										</a>
 									</li>
@@ -379,11 +379,11 @@ $data = mysqli_fetch_array($sql);
 						include 'modul/master/ta/del.php';
 					} elseif ($act == 'set_ta') {
 						include 'modul/master/ta/set.php';
-						// mapel
-					} elseif ($act == 'mapel') {
-						include 'modul/master/mapel/data.php';
-					} elseif ($act == 'delmapel') {
-						include 'modul/master/mapel/del.php';
+						// mk
+					} elseif ($act == 'mk') {
+						include 'modul/master/mk/data.php';
+					} elseif ($act == 'delmk') {
+						include 'modul/master/mk/del.php';
 					}
 				} elseif ($page == 'dosen') {
 					if ($act == '') {

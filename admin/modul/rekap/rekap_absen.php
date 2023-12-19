@@ -2,7 +2,7 @@
 // tampilkan data mengajar
 $kelasMengajar = mysqli_query($con, "SELECT * FROM tb_mengajar 
 
-INNER JOIN tb_master_matkul ON tb_mengajar.id_mapel=tb_master_matkul.id_mk
+INNER JOIN tb_master_matkul ON tb_mengajar.id_mk=tb_master_matkul.id_mk
 INNER JOIN tb_mkelas ON tb_mengajar.id_mkelas=tb_mkelas.id_mkelas
 INNER JOIN tb_dosen ON tb_mengajar.id_dosen=tb_dosen.id_dosen
 
@@ -36,7 +36,7 @@ foreach ($kelasMengajar as $d)
 				<i class="flaticon-right-arrow"></i>
 			</li>
 			<li class="nav-item">
-				<a href="#">KELAS (<?= strtoupper($d['nama_kelas']) ?> )</a>
+			<?= $d['nama_kelas'] ? strtoupper($d['nama_kelas']) : '' ?>
 			</li>
 
 		</ul>
@@ -68,7 +68,7 @@ foreach ($kelasMengajar as $d)
 									<td><?= $no++; ?>.</td>
 									<td><?= $mp['kode_pelajaran']; ?></td>
 									<td>
-										<b><?= $mp['mapel']; ?></b><br>
+										<b><?= $mp['mk']; ?></b><br>
 										<code><?= $mp['nama_dosen']; ?></code>
 									</td>
 									<td>

@@ -63,12 +63,10 @@ include 'config/absensipnl';
                         <div class="page-inner py-5">
                             <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
                                 <div>
-                                    <h2 class="text-white pb-2 fw-bold">MTs INSAN KREASI</h2>
-                                    <!-- <h5 class="text-white op-7 mb-2">Absen Lebih mudah gunakan Aplikasi Absensi</h5> -->
+                                    <h2 class="text-white pb-2 fw-bold">POLITEKNIK NEGERI LHOKSEUMAWE</h2>
                                 </div>
                                 <div class="ml-md-auto py-2 py-md-0">
                                     <a href="#" class="btn btn-white btn-border btn-round mr-2">Buket rata Lhokseumawe</a>
-                                    <!-- <a href="view/siswa.php" class="btn btn-secondary btn-round">Ajukan Izin</a> -->
                                 </div>
                             </div>
                         </div>
@@ -86,6 +84,7 @@ include 'config/absensipnl';
                                     </center>
                                 </div>
                                 <div class="card-body">
+                                ...
                                     <form action="" method="post">
                                         <div class="form-group form-floating-label">
                                             <input name="username" type="email" class="form-control input-border-bottom"
@@ -103,6 +102,11 @@ include 'config/absensipnl';
                                                     class="flaticon-up-arrow-2"></i> Login</button>
                                             <a href="../index.php" class="btn btn-danger btn-block"><i
                                                     class="flaticon-back"></i> Back</a>
+                                        </div>
+                                        <!-- Tambahkan informasi username dan password di sini -->
+                                        <div class="text-center">
+                                            <p class="mb-1">user : admin@admin.com</p>
+                                            <p>pass : password</p>
                                         </div>
                                     </form>
 

@@ -1,6 +1,6 @@
 <?php
 @session_start();
-include '../config/db.php';
+include '../config/conn.php';
 
 if (!isset($_SESSION['dosen'])) {
 ?> <script>
@@ -15,13 +15,13 @@ if (!isset($_SESSION['dosen'])) {
 <?php
 $id_login = @$_SESSION['dosen'];
 $sql = mysqli_query($con, "SELECT * FROM tb_dosen
- WHERE id_dosen = '$id_login'") or die(mysqli_error($con));
+WHERE id_dosen = '$id_login'") or die(mysqli_error($con));
 $data = mysqli_fetch_array($sql);
 
 // tampilkan data mengajar
 $mengajar = mysqli_query($con, "SELECT * FROM tb_mengajar 
 
-INNER JOIN tb_master_matkul ON tb_mengajar.id_mapel=tb_master_matkul.id_mk
+INNER JOIN tb_master_matkul ON tb_mengajar.id_mk=tb_master_matkul.id_mk
 INNER JOIN tb_mkelas ON tb_mengajar.id_mkelas=tb_mkelas.id_mkelas
 
 INNER JOIN tb_semester ON tb_mengajar.id_semester=tb_semester.id_semester
@@ -210,7 +210,7 @@ WHERE tb_mengajar.id_dosen='$data[id_dosen]' AND tb_thajaran.status=1 ");
 									foreach ($mengajar as $dm) { ?>
 										<li>
 											<a href="?page=absen&pelajaran=<?= $dm['id_mengajar'] ?> ">
-												<span class="sub-item"><!-- <?= strtoupper($dm['mapel']); ?> -->KELAS (<?= strtoupper($dm['nama_kelas']); ?>)</span>
+												<span class="sub-item"><!-- <?= strtoupper($dm['mk']); ?> -->KELAS (<?= strtoupper($dm['nama_kelas']); ?>)</span>
 											</a>
 										</li>
 									<?php } ?>
@@ -231,7 +231,7 @@ WHERE tb_mengajar.id_dosen='$data[id_dosen]' AND tb_thajaran.status=1 ");
 									foreach ($mengajar as $dm) { ?>
 										<li>
 											<a href="?page=rekap&pelajaran=<?= $dm['id_mengajar'] ?> ">
-												<span class="sub-item"><!-- <?= strtoupper($dm['mapel']); ?> -->KELAS (<?= strtoupper($dm['nama_kelas']); ?>)</span>
+												<span class="sub-item"><!-- <?= strtoupper($dm['mk']); ?> -->KELAS (<?= strtoupper($dm['nama_kelas']); ?>)</span>
 											</a>
 										</li>
 									<?php } ?>
@@ -302,7 +302,7 @@ WHERE tb_mengajar.id_dosen='$data[id_dosen]' AND tb_thajaran.status=1 ");
 			<footer class="footer">
 				<div class="container">
 					<div class="copyright ml-auto">
-						&copy; <?php echo date('Y'); ?> Absensi Politeknik Negeri Lhokseumawe (<a href="index.php">Abid Taufiqur Rohman </a> | 2021)
+						&copy; <?php echo date('Y'); ?> Absensi Politeknik Negeri Lhokseumawe (<a href="index.php">Muhammad Maulana </a> | 2023)
 					</div>
 				</div>
 			</footer>

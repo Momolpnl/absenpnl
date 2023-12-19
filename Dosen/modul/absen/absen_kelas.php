@@ -43,7 +43,7 @@ foreach ($kelasMengajar as $d)
 <i class="flaticon-right-arrow"></i>
 </li>
 <li class="nav-item">
-<a href="#"><?=strtoupper($d['mapel']) ?></a>
+<a href="#"><?=strtoupper($d['mk']) ?></a>
 </li>
 </ul>
 

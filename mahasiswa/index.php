@@ -14,9 +14,9 @@ if (!isset($_SESSION['siswa'])) {
 
    <?php
 $id_login = @$_SESSION['siswa'];
-$sql = mysqli_query($con,"SELECT * FROM tb_siswa
-	INNER JOIN tb_mkelas ON tb_siswa.id_mkelas=tb_mkelas.id_mkelas
- WHERE tb_siswa.id_siswa = '$id_login'") or die(mysqli_error($con));
+$sql = mysqli_query($con,"SELECT * FROM tb_mahasiswa
+	INNER JOIN tb_mkelas ON tb_mahasiswa.id_mkelas=tb_mkelas.id_mkelas
+ WHERE tb_mahasiswa.id_mahasiswa = '$id_login'") or die(mysqli_error($con));
 $data = mysqli_fetch_array($sql);
 
 
@@ -25,7 +25,7 @@ $data = mysqli_fetch_array($sql);
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Siswa | Aplikasi Presensi</title>
+	<title>Mahasiswa | Aplikasi Presensi</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="../assets/img/icon.ico" type="image/x-icon"/>
 
@@ -229,7 +229,7 @@ $data = mysqli_fetch_array($sql);
 				}
 
 
-				 ?>
+				?>
 
 
 				<!-- end -->
@@ -238,7 +238,7 @@ $data = mysqli_fetch_array($sql);
 		<footer class="footer">
 				<div class="container">
 					<div class="copyright ml-auto">
-						&copy; <?php echo date('Y');?> Absensi mahasiswa Politeknik Negeri Lhokseumawe (<a href="index.php">Abid Taufiqur Rohman </a> | 2021)
+						&copy; <?php echo date('Y');?> Absensi mahasiswa Politeknik Negeri Lhokseumawe (<a href="index.php">Muhammad Maulana </a> | 2021)
 					</div>				
 				</div>
 			</footer>

@@ -94,7 +94,7 @@ $tglTerakhir = date('t',strtotime($tglBulan));
   <tr>
     <td>Bidang Studi </td>
     <td>:</td>
-    <td><?=$d['mapel'] ?></td>
+    <td><?=$d['mk'] ?></td>
   </tr>
   <tr>
     <td>Wali Kelas </td>

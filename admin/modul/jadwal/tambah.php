@@ -81,8 +81,8 @@ $semAktif = mysqli_fetch_array(mysqli_query($con,"SELECT * FROM tb_semester WHER
 											<select name="mk" class="form-control">
 												<option value="">- Pilih -</option>
 												<?php 
-												$mapel = mysqli_query($con,"SELECT * FROM tb_master_matkul ORDER BY id_mk ASC");
-												foreach ($mapel as $g) {
+												$mk = mysqli_query($con,"SELECT * FROM tb_master_matkul ORDER BY id_mk ASC");
+												foreach ($mk as $g) {
 													echo "<option value='$g[id_mk]'>[ $g[kode_mk] ] $g[mk]</option>";
 												}
 												 ?>
@@ -176,13 +176,13 @@ $semAktif = mysqli_fetch_array(mysqli_query($con,"SELECT * FROM tb_semester WHER
 									$ta = $_POST['ta'];
 									$semester = $_POST['semester'];
 									$dosen = $_POST['dosen'];
-									$mapel = $_POST['mapel'];
+									$mk = $_POST['mk'];
 									$hari = $_POST['hari'];
 									$kelas = $_POST['kelas'];
 									$waktu = $_POST['waktu'];
 									$jamke = $_POST['jamke'];
 
-						$insert = mysqli_query($con,"INSERT INTO tb_mengajar VALUES (NULL,'$kode','$hari','$waktu','$jamke','$dosen','$mapel','$kelas','$semester','$ta' ) ");
+						$insert = mysqli_query($con,"INSERT INTO tb_mengajar VALUES (NULL,'$kode','$hari','$waktu','$jamke','$dosen','$mk','$kelas','$semester','$ta' ) ");
 
 								if ($insert) {
 								echo "
