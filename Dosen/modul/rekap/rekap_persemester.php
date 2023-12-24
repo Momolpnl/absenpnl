@@ -90,7 +90,7 @@ $tglTerakhir = 25;
  			<center>
  				
  				<h1>
- 					ABSESNSI SISWA <br>
+ 					ABSESNSI MAHASISWA <br>
  					<small> MTs INSAN KREASI</small>
  				</h1>
  				<hr>
@@ -160,7 +160,7 @@ $tglTerakhir = 25;
 <table width="100%" border="1" cellpadding="2" style="border-collapse: collapse;">
   <tr>
     <td rowspan="2" bgcolor="#EFEBE9" align="center">NO</td>
-    <td rowspan="2" bgcolor="#EFEBE9">NAMA SISWA</td>
+    <td rowspan="2" bgcolor="#EFEBE9">NAMA MAHASISWA</td>
     <td rowspan="2" bgcolor="#EFEBE9" align="center">L/P</td>
     <td colspan="<?=$tglTerakhir;?>" style="padding: 8px;"><b>Pertemuan Ke -</b></td>
     <td colspan="5" align="center" bgcolor="#EFEBE9">JUMLAH</td>
@@ -181,7 +181,7 @@ $tglTerakhir = 25;
  
   </tr>
   	<?php 
-			// tampilkan absen siswa
+			// tampilkan absen mahasiswa
 			$no=1;
 			foreach ($qry as $ds) {
 				 $warna = ($no % 2 == 1) ? "#ffffff" : "#f0f0f0";

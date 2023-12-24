@@ -100,7 +100,7 @@ foreach ($kelasMengajar as $d)
 												<div class="username">
 													<b><?=$s['nama_mahasiswa'] ?></b>
 													<input type="hidden" name="id_mahasiswa-<?=$i;?>" value="<?=$s['id_mahasiswa'] ?>">
-													<input type="hidden" name="pelajaran" value="<?=$_GET['pelajaran'] ?>">
+													<input type="hidden" name="mk" value="<?=$_GET['mk'] ?>">
 												</div>
 												<div class="status">
 
@@ -196,7 +196,7 @@ foreach ($kelasMengajar as $d)
 										for ($i =0; $i <=$total ; $i++) {
 
 											$id_mahasiswa = $_POST['id_mahasiswa-'.$i];
-											$pelajaran = $_POST['pelajaran'];
+											$pelajaran = $_POST['mk'];
 											$ket = $_POST['ket-'.$i];
 
 

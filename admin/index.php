@@ -68,7 +68,8 @@ include '../config/conn.php';
 							</button>
 						</div>
 					</div>
-
+					<p class="mb-1">user : admin@gmail.com</p>
+                                            <p>pass : password</p>
 				
 				</form>
 

@@ -91,9 +91,9 @@ foreach ($kelasMengajar as $d)
             <div class="card">
                 <div class="card-body">
                     <form action="" method="post">
-                        <!-- <div class="card-title fw-mediumbold">DAFTAR HADIR SISWA</div> -->
+                        <!-- <div class="card-title fw-mediumbold">DAFTAR HADIR MAHASISWA</div> -->
                         <!-- 			<p>
-									<span class="badge badge-default" style="padding: 7px;font-size: 14px;"><b>Daftar Hadir Siswa</b>
+									<span class="badge badge-default" style="padding: 7px;font-size: 14px;"><b>Daftar Hadir Mahasiswa</b>
 									</span>
 									<span class="badge badge-primary" style="padding: 7px;font-size: 14px;">
 									Pertemuan Ke : <b><?=$pertemuan; ?></b>
@@ -109,10 +109,10 @@ foreach ($kelasMengajar as $d)
 										// tampilakan data mahasiswa berdasarkan kelas yang dipilih
 										$tgl_hari_ini = date('Y-m-d');
 
-										$siswa = mysqli_query($con,"SELECT * FROM _logabsensi INNER JOIN tb_siswa ON _logabsensi.id_siswa=tb_siswa.id_siswa WHERE  _logabsensi.tgl_absen='$tgl_hari_ini' AND _logabsensi.id_mengajar='$_GET[pelajaran]' ORDER BY _logabsensi.id_siswa ASC  ");
-										$jumlahmahasiswa = mysqli_num_rows($siswa);
+										$mahasiswa = mysqli_query($con,"SELECT * FROM _logabsensi INNER JOIN tb_siswa ON _logabsensi.id_mahasiswa=tb_mahasiswa.id_mahasiswa WHERE  _logabsensi.tgl_absen='$tgl_hari_ini' AND _logabsensi.id_mengajar='$_GET[pelajaran]' ORDER BY _logabsensi.id_siswa ASC  ");
+										$jumlahmahasiswa = mysqli_num_rows($mahasiswa);
 								
-										foreach ($siswa as $i =>$s) {?>
+										foreach ($mahasiswa as $i =>$s) {?>
                             <tr>
                                 <td>
                                     <b class="text-success"><?=$s['nama_siswa']; ?></b>

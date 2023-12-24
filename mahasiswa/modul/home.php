@@ -74,7 +74,7 @@
 							<p>
 								<hr>
 
-								Aplikasi Absensi siswa ini dibuat untuk mendokumentasikan kehadiran siswa, Aplikasi sangat mudah digunakan (Berbasis web)
+								Aplikasi Absensi mahasiswa ini dibuat untuk mendokumentasikan kehadiran mahasiswa, Aplikasi sangat mudah digunakan (Berbasis web)
 							</p>
 						</div>
 					</div>

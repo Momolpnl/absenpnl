@@ -133,20 +133,20 @@ include 'config/conn.php';
 						}
 						
 					}elseif ($level==2) {
-						// Siswa
-								$sqlCek = mysqli_query($con,"SELECT * FROM tb_siswa WHERE nis='$_POST[username]' AND password='$pass' AND status='1'");
+						// mahasiswa
+								$sqlCek = mysqli_query($con,"SELECT * FROM tb_mahasiswa WHERE nis='$_POST[username]' AND password='$pass' AND status='1'");
 								$jml = mysqli_num_rows($sqlCek);
 								$d = mysqli_fetch_array($sqlCek);
 								
 								if ($jml > 0) {
-								$_SESSION['siswa']= $d['id_siswa'];
+								$_SESSION['mahasiswa']= $d['id_mahasiswa'];
 								
 								
 								echo "
 								<script type='text/javascript'>
 								setTimeout(function () { 
 								
-								swal('($d[nama_siswa]) ', 'Login berhasil', {
+								swal('($d[nama_mahasiswa]) ', 'Login berhasil', {
 								icon : 'success',
 								buttons: {        			
 								confirm: {
@@ -156,7 +156,7 @@ include 'config/conn.php';
 								});    
 								},10);  
 								window.setTimeout(function(){ 
-								window.location.replace('./siswa/');
+								window.location.replace('./mahasiswa/');
 								} ,3000);   
 								</script>";
 								

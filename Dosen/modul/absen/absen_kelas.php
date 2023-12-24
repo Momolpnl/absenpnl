@@ -7,7 +7,7 @@ INNER JOIN tb_mkelas ON tb_mengajar.id_mkelas=tb_mkelas.id_mkelas
 
 INNER JOIN tb_semester ON tb_mengajar.id_semester=tb_semester.id_semester
 INNER JOIN tb_thajaran ON tb_mengajar.id_thajaran=tb_thajaran.id_thajaran
-WHERE tb_mengajar.id_dosen='$data[id_dosen]' AND tb_mengajar.id_mengajar='$_GET[pelajaran]'  AND tb_thajaran.status=1  ");
+WHERE tb_mengajar.id_dosen='$data[id_dosen]' AND tb_mengajar.id_mengajar='$_GET[mk]'  AND tb_thajaran.status=1  ");
 
 foreach ($kelasMengajar as $d) 
 
@@ -37,13 +37,13 @@ foreach ($kelasMengajar as $d)
 <i class="flaticon-right-arrow"></i>
 </li>
 <li class="nav-item">
-<a href="#">KELAS (<?=strtoupper($d['nama_kelas']) ?> )</a>
+<?= isset($d['nama_kelas']) ? strtoupper($d['nama_kelas']) : '' ?>
 </li>
 <li class="separator">
 <i class="flaticon-right-arrow"></i>
 </li>
 <li class="nav-item">
-<a href="#"><?=strtoupper($d['mk']) ?></a>
+<?= isset($d['mk']) ? strtoupper($d['mk']) : '' ?>
 </li>
 </ul>
 
@@ -55,7 +55,7 @@ foreach ($kelasMengajar as $d)
 						
 						<?php 
 								// dapatkan pertemuan terakhir di tb izin
-								$last_pertemuan = mysqli_query($con,"SELECT * FROM _logabsensi WHERE id_mengajar='$_GET[pelajaran]' GROUP BY pertemuan_ke ORDER BY pertemuan_ke DESC LIMIT 1  ");
+								$last_pertemuan = mysqli_query($con, "SELECT * FROM _logabsensi WHERE id_mengajar='$_GET[pelajaran]' GROUP BY pertemuan_ke, id_siswa ORDER BY pertemuan_ke DESC LIMIT 1");
 								$cekPertemuan = mysqli_num_rows($last_pertemuan);
 								$jml = mysqli_fetch_array($last_pertemuan);
 
@@ -72,9 +72,9 @@ foreach ($kelasMengajar as $d)
 							<div class="card">
 								<div class="card-body">
 									<form action="" method="post">
-									<!-- <div class="card-title fw-mediumbold">DAFTAR HADIR SISWA</div> -->
+									<!-- <div class="card-title fw-mediumbold">DAFTAR HADIR MAHASISWA</div> -->
 									<p>
-									<span class="badge badge-default" style="padding: 7px;font-size: 14px;"><b>Daftar Hadir Siswa</b>
+									<span class="badge badge-default" style="padding: 7px;font-size: 14px;"><b>Daftar Hadir Mahasiswa</b>
 									</span>
 									<span class="badge badge-primary" style="padding: 7px;font-size: 14px;">
 									Pertemuan Ke : <b><?=$pertemuan; ?></b>
@@ -92,9 +92,9 @@ foreach ($kelasMengajar as $d)
 										<?php 
 
 
-										$siswa = mysqli_query($con,"SELECT * FROM tb_siswa WHERE id_mkelas='$d[id_mkelas]' ORDER BY id_siswa ASC ");
-										$jumlahmahasiswa = mysqli_num_rows($siswa);
-										foreach ($siswa as $i =>$s) {?>
+										$mahasiswa = mysqli_query($con,"SELECT * FROM tb_mahasiswa WHERE id_mkelas='$d[id_mkelas]' ORDER BY id_mahasiswa ASC ");
+										$jumlahmahasiswa = mysqli_num_rows($mahasiswa);
+										foreach ($mahasiswa as $i =>$s) {?>
 
 										<div class="item-list">
 										<!-- <div class="avatar">

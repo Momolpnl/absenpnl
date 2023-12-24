@@ -1,8 +1,8 @@
 <?php
 @session_start();
- include '../config/db.php';
+ include '../config/conn.php';
 
-if (!isset($_SESSION['siswa'])) {
+if (!isset($_SESSION['mahasiswa'])) {
 ?> <script>
     alert('Maaf ! Anda Belum Login !!');
     window.location='../user.php';
@@ -13,7 +13,7 @@ if (!isset($_SESSION['siswa'])) {
 
 
    <?php
-$id_login = @$_SESSION['siswa'];
+$id_login = @$_SESSION['mahasiswa'];
 $sql = mysqli_query($con,"SELECT * FROM tb_mahasiswa
 	INNER JOIN tb_mkelas ON tb_mahasiswa.id_mkelas=tb_mkelas.id_mkelas
  WHERE tb_mahasiswa.id_mahasiswa = '$id_login'") or die(mysqli_error($con));

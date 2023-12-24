@@ -93,9 +93,9 @@ foreach ($kelasMengajar as $d)
 							<div class="card">
 								<div class="card-body">
 									<form action="" method="post">
-									<!-- <div class="card-title fw-mediumbold">DAFTAR HADIR SISWA</div> -->
+									<!-- <div class="card-title fw-mediumbold">DAFTAR HADIR MAHASISWA</div> -->
 									<p>
-									<span class="badge badge-default" style="padding: 7px;font-size: 14px;"><b>Daftar Hadir Siswa</b>
+									<span class="badge badge-default" style="padding: 7px;font-size: 14px;"><b>Daftar Hadir Mahasiswa</b>
 									</span>
 									<span class="badge badge-primary" style="padding: 7px;font-size: 14px;">
 									Pertemuan Ke : <b><?=$pertemuan; ?></b>
@@ -114,9 +114,9 @@ foreach ($kelasMengajar as $d)
 
 										// tampilakan data mahasiswa berdasarkan kelas yang dipilih
 
-										$siswa = mysqli_query($con,"SELECT * FROM tb_siswa WHERE id_mkelas='$d[id_mkelas]' ORDER BY id_siswa ASC ");
-										$jumlahmahasiswa = mysqli_num_rows($siswa);
-										foreach ($siswa as $i =>$s) {?>
+										$mahasiswa = mysqli_query($con,"SELECT * FROM tb_siswa WHERE id_mkelas='$d[id_mkelas]' ORDER BY id_siswa ASC ");
+										$jumlahmahasiswa = mysqli_num_rows($mahasiswa);
+										foreach ($mahasiswa as $i =>$s) {?>
 
 										<div class="item-list">
 <!-- 											<div class="avatar">

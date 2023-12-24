@@ -36,7 +36,7 @@ foreach ($kelasMengajar as $d)
 				<i class="flaticon-right-arrow"></i>
 			</li>
 			<li class="nav-item">
-			<?= $d['nama_kelas'] ? strtoupper($d['nama_kelas']) : '' ?>
+				<?= $d['nama_kelas'] ? strtoupper($d['nama_kelas']) : '' ?>
 			</li>
 
 		</ul>
@@ -63,24 +63,36 @@ foreach ($kelasMengajar as $d)
 						<tbody>
 							<?php
 							$no = 1;
-							foreach ($kelasMengajar as $mp) { ?>
+							foreach ($kelasMengajar as $mp) {
+							?>
 								<tr>
 									<td><?= $no++; ?>.</td>
-									<td><?= $mp['kode_pelajaran']; ?></td>
+									<td><?= $mp['kode_mk']; ?></td>
 									<td>
 										<b><?= $mp['mk']; ?></b><br>
 										<code><?= $mp['nama_dosen']; ?></code>
 									</td>
 									<td>
-										<a href="?page=rekap&act=rekap-perbulan&pelajaran=<?= $mp[id_mengajar] ?>&kelas=<?= $_GET[kelas] ?>" class="btn btn-default">
-											<span class="btn-label">
-												<i class="fas fa-clipboard"></i>
-											</span>
-											Rekap Absen
-										</a>
+										<?php
+										// Check if 'id_mengajar' key exists in $mp array and $_GET['kelas'] is set
+										if (isset($mp['id_mengajar']) && isset($_GET['kelas'])) {
+											$rekapUrl = "?page=rekap&act=rekap-perbulan&pelajaran={$mp['id_mengajar']}&kelas={$_GET['kelas']}";
+										?>
+											<a href="<?= $rekapUrl ?>" class="btn btn-default">
+												<span class="btn-label">
+													<i class="fas fa-clipboard"></i>
+												</span>
+												Rekap Absen
+											</a>
+										<?php } else {
+											// Handle the case where 'id_mengajar' is not set in $mp or $_GET['kelas'] is not set
+											echo "Error: Missing required data";
+										}
+										?>
 									</td>
 								</tr>
 							<?php } ?>
+
 
 						</tbody>
 					</table>

@@ -7,7 +7,7 @@ include 'config/absensipnl';
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Presensi Siswa</title>
+    <title>Presensi Mahasiswa</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <link rel="icon" href="assets/img/icon.ico" type="image/x-icon" />
 
@@ -179,7 +179,7 @@ include 'config/absensipnl';
             <footer class="footer">
                 <div class="container">
                     <div class="copyright ml-auto">
-                        &copy; <?php echo date('Y');?> Absensi Mahasiswa.<a href="index.php">Muhammad Maulana </a> | 2515048
+                        &copy; <?php echo date('Y');?> Absensi Mahasiswa<a href="index.php">Muhammad Maulana </a> | 2515048
                     </div>
                 </div>
             </footer>

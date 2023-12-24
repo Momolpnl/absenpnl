@@ -71,7 +71,7 @@ WHERE tb_mengajar.id_dosen='$data[id_dosen]' AND tb_thajaran.status=1 ");
 
 				<a href="index.php" class="logo">
 					<!-- <img src="../assets/img/logo_pnl.png" alt="navbar brand" class="navbar-brand" width="40"> -->
-					<b class="text-white">Presensi Siswa</b>
+					<b class="text-white">Presensi Mahasiswa</b>
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
