@@ -69,7 +69,7 @@ include '../config/conn.php';
 						</div>
 					</div>
 					<p class="mb-1">user : admin@gmail.com</p>
-                                            <p>pass : password</p>
+                                            <p>pass : admin</p>
 				
 				</form>
 

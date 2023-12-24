@@ -188,7 +188,7 @@ include 'config/conn.php';
 								$d = mysqli_fetch_array($sqlCek);
 								
 								if ($jml > 0) {
-								$_SESSION['kepsek']= $d['id_kepsek'];
+								
 								
 								
 								echo "
